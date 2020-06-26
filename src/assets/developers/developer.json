@@ -1,0 +1,23 @@
+[
+
+  {
+    "id": 1,
+    "name": "Maria",
+    "title": "Developer",
+    "description": "Software Engineer, Gutarrist and overly cat person. Passionate about learning new things, expecially new tecnologies and tools. ",
+    "image": "maria.jpg",
+    "github": "https://github.com/mlgubolin",
+    "gitlab": "https://github.com/mlgubolin",
+    "linkedin": "https://www.linkedin.com/"
+  },
+  {
+    "id": 2,
+    "name": "Denise",
+    "title": "Developer",
+    "description": "Software developer, mother, book addicted, and passionate about crafts. Build solutions is my motivation.",
+    "image": "denise.jpg",
+    "github": "https://github.com/dendenmuniz",
+    "linkedin": "https://www.linkedin.com/deniseamuniz"
+  }
+]
+

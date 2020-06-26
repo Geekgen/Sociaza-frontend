@@ -1,0 +1,19 @@
+{
+  "short_name": "Sociaza",
+  "name": "Sociaza - Brazuca Svenska",
+  "version": "1.0.0",
+  "description": "A way to keep in touch with your peers",
+  "icons": [
+    {
+    "src": "favicon.ico",
+    "sizes": "64x64 32x32 24x24 16x16",
+    "type": "image/x-icon"
+    }],
+    "author": [{"author1": "Denise Muniz <dendenmuniz@gmail.com> (https://github.com/dendenmuniz)", 
+      "author2":"Malu Gubolin  <mlgubolin@protonmail.com> (https://github.com/mlgubolin)"
+    }],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
