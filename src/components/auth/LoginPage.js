@@ -80,154 +80,13 @@ class LoginPage extends Component {
             </div>
           </div>
         </div>
-        {/* NAVBAR
-        <nav className="navbar navbar-expand-lg navbar-light bg-sedondary shadowNavbar">
-          <a className="navbar-brand" href="javascript.void(0)">
-            <img
-              src={require(`../../assets/ico.png`)}
-              width={50}
-              height={50}
-              alt="Logo"
-            />
-          </a>
-          {/* NAVBAR TOGGLE BUTTON ON SMALL SCREENS 
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav ml-auto">
-              <li className="nav-item active">
-                <button
-                  type="button"
-                  className="btn"
-                  data-toggle="modal"
-                  data-target="#login"
-                >
-                  Login
-                </button>
-              </li>
-              <li className="nav-item">
-                <button
-                  type="button"
-                  className="btn"
-                  data-toggle="modal"
-                  data-target="#sign-up"
-                >
-                  Sign up
-                </button>
-              </li>
-            </ul>
-          </div>
-        </nav>*/}
 
         <br />
         <br />
-        {/* CAROUSELS 
-        <div className="container mt-2">
-          <div
-            id="carouselExampleIndicators"
-            className="carousel slide"
-            data-ride="carousel"
-          >
-            <ol className="carousel-indicators">
-              <li
-                data-target="#carouselExampleIndicators"
-                data-slide-to="0"
-                className="active"
-              ></li>
-              <li
-                data-target="#carouselExampleIndicators"
-                data-slide-to="1"
-              ></li>
-              <li
-                data-target="#carouselExampleIndicators"
-                data-slide-to="2"
-              ></li>
-            </ol>
-
-            <div className="carousel-inner">
-              <div className="carousel-item active">
-                <img
-                  src={require(`../../assets/landingpagecarousels/bars.jpeg`)}
-                  width={1200}
-                  height={400}
-                  alt="Logo"
-                />
-                <div className="carousel-caption d-none d-md-block">
-                  <h1 className="display-3 landingPageHeader" text-secondary>
-                    Outdoor Trainings
-                  </h1>
-                  <p></p>
-
-                  <button
-                    type="button"
-                    className="btn   btn-lg"
-                    data-toggle="modal"
-                    data-target="#sign-up"
-                  >
-                    Get Started
-                  </button>
-                </div>
-              </div>
-              <div className="carousel-item">
-                <img
-                  src={require(`../../assets/landingpagecarousels/contrast.jpeg`)}
-                  width={1200}
-                  height={400}
-                  alt="Logo"
-                />
-                <div className="carousel-caption d-none d-md-block">
-                  <h1 className="display-3 landingPageHeader" text-secondary>
-                    Outdoor Sports
-                  </h1>
-                  <p></p>
-
-                  <button
-                    type="button"
-                    className="btn btn-lg"
-                    data-toggle="modal"
-                    data-target="#sign-up"
-                  >
-                    Get Started
-                  </button>
-                </div>
-              </div>
-              <div className="carousel-item">
-                <img
-                  src={require(`../../assets/landingpagecarousels/leaves.jpeg`)}
-                  width={1200}
-                  height={400}
-                  alt="Logo"
-                />
-                <div className="carousel-caption d-none d-md-block">
-                  <h1 className="display-3 landingPageHeader" text-secondary>
-                    Open oppertunities for Business
-                  </h1>
-                  <p></p>
-                  <button
-                    type="button"
-                    className="btn btn-lg"
-                    data-toggle="modal"
-                    data-target="#sign-up"
-                  >
-                    Get Started
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>*/}
+       
         <div className="main-page-intro landingPageHeader">
         <img
                   src={require(`../../assets/images/Sociaza_banner.png`)}
-                  width={820}
-                  height={312}
                   alt="Logo"
                 />
                 <button
@@ -251,7 +110,7 @@ class LoginPage extends Component {
         {/* OUTDOOR SERVICES */}
         <div className="container-fluid-padding">
           <div className="row welcome text-center">
-            <div className="col-12">
+            <div className="col-xs-12 col-sm-6 col-md-4">
              {/*  <h1
                 className="display-3 landingPageHeader"
                 style={{ paddingTop: "60px", paddingBottom: "30px" }}
@@ -263,24 +122,22 @@ class LoginPage extends Component {
           </div>
         </div>
         {/* CARDS */}
-        <div className="container-fluid" style={{ padding: "30px"}}>
+        <div className="container-fluid p-3" >
           <div className="row justify-content-around">
-            <div className="col-md-4">
+            <div className="col-xs-12 col-sm-6 col-md-4">
               <div className="card shadow">
                 <img
                   className="card-img-top"
-                  src={require(`../../assets/landingpagecards/helpfultips.jpg`)}
-                  width={300}
-                  height={300}
+                  src={require(`../../assets/landingpagecards/oie_292086utjOIIn1.jpg`)}
                   alt = 'tips'
                 />
                 <div className="card-body">
-                  <h4 className="card.title display-4 landingPageHeader">
+                  <h4 className="card.title  landingPageHeader">
                     Helpful tips
                   </h4>
                   <p className="card-text">
-                     Helpful tips and advices about groceries, shopping, food, studies, health, 
-                     and almost everything you can imagine and need to live as a Brazilian imigrant in Sweden.
+                     Helpful tips and advices about shopping, food, studies, health, 
+                     and almost everything you can need to live as a Brazilian imigrant in Sweden.
                   </p>
                 </div>
               </div>
@@ -290,12 +147,10 @@ class LoginPage extends Component {
                 <img
                   className="card-img-top"
                   src={require(`../../assets/landingpagecards/friends.jpg`)}
-                  width={300}
-                  height={300}
                   alt="friends"
                 />
                 <div className="card-body">
-                  <h4 className="card.title display-4 landingPageHeader">
+                  <h4 className="card.title landingPageHeader">
                     Friends
                   </h4>
                   <p className="card-text">

@@ -16,11 +16,12 @@ function personCard(people){
 
 function AboutUs() {
   return (
-    <div>
+    <div class="container-fluid">
       <h2 class="team-title">Our Development Team</h2>
-      <div class=" container-fluid d-flex justify-content-center" >
-        <div class="row">
+      <div class="container-fluid d-flex justify-content-center" >
+        <div class="row justify-content-center">
         {personCard(people)}
+        
         </div>
       </div>
     </div>

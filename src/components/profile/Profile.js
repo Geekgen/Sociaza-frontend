@@ -97,7 +97,7 @@ class Profile extends React.Component {
       </div>
     );
     const bookingDiv = (
-      <div className="table table-hover table-responsive ">
+      <div className="table table-hover table-responsive w-100 d-block d-md-table">
         <h3> My Bookings</h3>
         <table className="table service-table">
           <thead>
@@ -130,7 +130,7 @@ class Profile extends React.Component {
     return (
       <div className="container">
         <div className="row profile">
-          <div className="col-md-6">
+          <div className="col-md-6 col-xs-12 col-sm-6">
             {data ? (
               <img
                 className="profile-pic rounded-circle"
@@ -140,7 +140,7 @@ class Profile extends React.Component {
               <FaUserCircle color="gray" size="13rem" />
             )}
           </div>
-          <div className="col-md-6">
+          <div className="col-md-6 col-xs-12 col-sm-6">
             <ProfilePic />
           </div>
         </div>

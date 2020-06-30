@@ -45,47 +45,60 @@ body {
 .navbar {
   align-items: right;
   justify-content: space-between;
-  height: 60px;
-  padding: 20px 0px;
-  font-size: 13px;
+  height: 1.5em;
+  padding: 1rem 0;
+  font-size: 3rem;
   background: #072e74;
   color: #a4c100;
+  
 }
 
+.navbar img {
+  width: 3em;
+  height: 3em;
+}
 .nav-item {
-  height: 64;
   font-weight: 800;
-  margin-left: 25px;
-  margin-right: 25px;
+  margin-left: 1rem;
+  margin-right: 1rem;
   color: #a4c100;
-  font-size: 15px;
+  font-size: 4rem;
+  display: inline;
 }
-
 .nav-link {
   font-size: medium;
   color: #a4c100;
   
 }
-
 .navbar-nav li {
-  font-size: 25px;
+  font-size: 4rem;
+  vertical-align: middle;
+  display: inline-block;
 }
 
 .nav-item .btn {
-  height: 64;
   font-weight: 800;
-  margin-left: 25px;
-  margin-right: 25px;
+  margin-left: .8rem;
+  margin-right: .7rem;
   color: #a4c100;
- 
 }
 .dropdown-item {
   font-weight: 600;
   font-size: medium;
   font-family: "Rubik", sans-serif;
+  background-color: #a4c100;
 }
+.navbar ul li button:hover {
+  border: 0;
+  color: #fff8d8;
+}
+.nav-item :hover {
+  border: .5rem solid #a4c100;
+  background-color: #a4c100;
+  color: #fff8d8;
+}
+
 .link-button .btn {
-  height: 64;
   font-weight: 800;
   color: #fff8d8;
   background-color: #072e74;
@@ -112,24 +125,6 @@ body {
   font-weight: 800;
 }
 
-@media (max-width: 1090px) {
-  .nav-item {
-    padding: 0px !important;
-    margin-left: 10px !important;
-    margin-right: 10px !important;
-  }
-}
-
-.navbar ul li button:hover {
-  border-bottom: 1px solid #6db9d5;
-  color: #fff8d8;
-}
-
-.nav-item :hover {
-  border: 5px solid #a4c100;
-  background-color: #a4c100;
-  color: #072e74;
-}
 .link-button button {
   height: 64;
   font-weight: 800;
@@ -142,7 +137,456 @@ body {
   color: white;
 }
 
-@media (max-width: 1000px) {
+.main-page-intro button {
+  width: 8.5em;
+  height: 2.3em;
+  font-size: 1.7em;
+  font-weight: 800;
+}
+
+.main-page-intro button:hover {
+  background-color: grey;
+  color: white;
+}
+
+.card-img-top {
+  width: 17rem;
+  height: 13rem;
+}
+
+.card-body h4 {
+  font-size: 3.2em;
+  font-weight: 700;
+}
+
+.carousel-inner img {
+  width: 95%;
+  margin: auto;
+  display: block;
+}
+
+.carousel-caption {
+  position: absolute;
+  transform: translateY(80%);
+}
+
+.welcome h1{
+  font-size: 4rem;
+}
+
+#btnPedals, #btnHiking, #btnFood,
+#btnGames, #btnTourism, #btnNews {
+  display: none;
+}
+#btnMPedals, #btnMHiking, #btnMFood,
+#btnMFood, #btnMGames, #btnMTourism,
+#btnMNews {
+  display: inline-block;
+  font-size: 1.5rem;
+}
+#h4Pedals, #h4Hiking, 
+#h4Games, #h4Tourism {
+  height: 7.7rem;
+}
+
+
+/*---Media Queries --*/
+@media (max-width: 992px) {
+  .navbar {
+    align-items: flex-end;
+    height: 2em;
+    padding: .4rem;
+    font-size: 3rem;
+  }
+  .navbar img {
+    width: 2.7em;
+    height: 2.7em;
+  }
+  .nav-item {
+    font-size: 2.9rem;
+  }
+  .navbar-nav li {
+    font-size: 3rem;
+    vertical-align: middle;
+  }
+  .nav-item .btn {
+    font-weight: 800;
+    margin-left: .1em;
+    margin-right: .1em;
+    align-self: flex-end;
+    font-size: .37em;
+  }
+
+  .card-img-top {
+    width: 16rem;
+    height: 12rem;
+  }
+
+  .card-body h4 {
+    font-size: 2em;
+    font-weight: 500;
+  }
+
+  .main-page-intro button {
+    width: 8em;
+    height: 2em;
+    font-size: 1.7em;
+    font-weight: 500;
+  }
+
+ 
+  .carousel-inner img {
+    width: 95%;
+    margin: auto;
+    display: block;
+  }
+  .carousel-caption {
+    position: absolute;
+    transform: translateY(70%);
+  }
+
+  #btnPedals {
+    display: none;
+  }
+  #btnMPedals {
+    display: inline-block;
+  }
+  #h4Pedals {
+    height: 5rem;
+  }
+
+  #btnHiking {
+    display: none;
+  }
+  #btnMHiking {
+    display: inline-block;
+  }
+ 
+
+  #btnFood {
+    display: none;
+  }
+  #btnMFood {
+    display: inline-block;
+  }
+
+  #btnGames {
+    display: none;
+  }
+  #btnMGames {
+    display: inline-block;
+  }
+  #h4Games {
+    height: 5rem;
+  }
+
+  #btnTourism {
+    display: none;
+  }
+  #btnMTourism {
+    display: inline-block;
+  }
+ 
+
+  #btnNews {
+    display: none;
+    
+  }
+  #btnMNews {
+    display: inline-block;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    align-items: flex-end;
+    height: 2em;
+    padding: .4rem;
+    font-size: 2.7rem;
+  }
+  .navbar img {
+    width: 2.5em;
+    height: 2.5em;
+  }
+  .nav-item {
+    font-weight: 600;
+    margin-left: .8em;
+    margin-right: .8em;
+    vertical-align: text-top;
+ 
+  }
+  .navbar-nav li {
+    font-size: 3rem;
+
+  }
+  .nav-item .btn {
+    font-weight: 600;
+    margin-left: .1em;
+    margin-right: .1em;
+    align-self: flex-end;
+    font-size: .4em;
+  }
+  #linkHome {
+    display: none;
+  }
+
+  .main-page-intro img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .main-page-intro button {
+    width: 8em;
+    height: 2em;
+    font-size: 1.5em;
+    font-weight: 200;
+  }
+
+  .card-img-top {
+    width: 16rem;
+    height: 12rem;
+  }
+
+  .card-body h4 {
+    font-size: 2em;
+    font-weight: 500;
+  }
+
+  .carousel-indicators {
+    visibility: hidden;
+  }
+  .carousel-inner img {
+    width: 40rem;
+  }
+  .carousel-caption {
+    position: absolute;
+    transform: translateY(70%);
+  }
+
+  .welcome {
+    align-content: center;
+  }
+
+  #btnPedals {
+    display: none;
+  }
+  #btnMPedals {
+    display: inline-block;
+    font-size: 1.4rem;
+  }
+
+  #btnHiking {
+    display: none;
+  }
+  #btnMHiking {
+    display: inline-block;
+    font-size: 1.4rem;
+  }
+
+  #h4Hiking, #h4Tourism {
+    height: 5rem;
+  }
+
+  #btnFood {
+    display: none;
+  }
+  #btnMFood {
+    display: inline-block;
+    font-size: 1.4rem;
+  }
+
+
+  #btnGames {
+    display: none;
+  }
+  #btnMGames {
+    display: inline-block;
+    font-size: 1.4rem;
+  }
+
+
+  #btnTourism {
+    display: none;
+  }
+  #btnMTourism {
+    display: inline-block;
+    font-size: 1.4rem;
+  }
+
+  #btnNews {
+    display: none;
+    
+  }
+  #btnMNews {
+    display: inline-block;
+    font-size: 1.4rem;
+  }
+ 
+
+
+}
+@media (max-width: 576px) {
+  .navbar {
+    align-items: right;
+    height: 2em;
+    padding: .2rem;
+    font-size: 1.5em;
+    color: #072e74;
+  }
+  .navbar img {
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: top;
+  }
+  .nav-item {
+    font-weight: 400;
+    margin-left: .8em;
+    margin-right: .8em;
+    color: #072e74;
+  }
+  .navbar-nav li {
+    font-size: 1.8em;
+  }
+  .nav-item .btn {
+    font-weight: 400;
+    margin-left: .1em;
+    margin-right: .1em;
+    align-self: flex-end;
+  }
+
+
+  .dropdown-item {
+    font-weight: 200;
+    font-size: 1em;
+    font-family: "Rubik", sans-serif;
+  }
+
+  .main-page-intro img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .main-page-intro button {
+    width: 8em;
+    height: 2em;
+    font-size: 1em;
+    font-weight: 200;
+  }
+
+  .card-img-top {
+    width: min-content;
+    height: min-content;
+  }
+
+  .card-body h4 {
+    font-size: 2em;
+    font-weight: 500;
+  }
+
+  .card {
+    margin-bottom: .5rem;
+  }
+  .carousel  {
+    display: none;
+  }
+
+  .welcome h1 {
+    font-size: 1.8rem;
+  }
+
+  .link-button-homepage .btn {
+    color: #072e74;
+    align-self: initial;
+  }
+
+  .card-body hr {
+    display: none;
+  }
+
+  #btnPedals {
+    display: inline-block;
+    font-size: 1.4rem;
+  }
+  #btnMPedals {
+    display: none;
+  }
+  #h4Pedals {
+    display: none;
+  }
+
+  #btnHiking {
+    display: inline-block;
+    font-size: 1.4rem;
+  }
+  #btnMHiking {
+    display: none;
+  }
+  #h4Hiking {
+    display: none;
+  }
+
+  #btnFood {
+    display: inline-block;
+    font-size: 1.4rem;
+  }
+  #btnMFood {
+    display: none;
+  }
+  #h4Food {
+    display: none;
+  }
+
+  #btnGames {
+    display: inline-block;
+    font-size: 1.4rem;
+  }
+  #btnMGames {
+    display: none;
+  }
+  #h4Games {
+    display: none;
+  }
+
+  #btnTourism {
+    display: inline-block;
+    font-size: 1.4rem;
+  }
+  #btnMTourism {
+    display: none;
+  }
+  #h4Tourism {
+    display: none;
+  }
+
+  #btnNews {
+    display: inline-block;
+    font-size: 1.4rem;
+    
+  }
+  #btnMNews {
+    display: none;
+  }
+  #h4News {
+    display: none;
+  }
+
+  .table button {
+    width: fit-content;
+    border-radius:.5rem;
+    font-size: .7em;
+  }
+
+}
+@media (max-width: 1090px) {
+  .nav-item {
+    padding: 0px !important;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+  }
+}
+
+/* @media (max-width: 1000px) {
   #navbarSupportedContent {
     background-color: white;
     padding: 8px;
@@ -163,7 +607,7 @@ body {
   #navbarSupportedContent ul li:last-child {
     border-bottom: 0;
   }
-}
+} */
 
 .card-body-login {
   background-color: #79ba9e;
@@ -185,6 +629,7 @@ body {
   /* background-color: #176560; */
   background-color: #072e74;
 }
+
 
 .main-page-intro {
   display: flex;

@@ -24,7 +24,7 @@ function ContactInformation(props) {
 function PersonCard(props) {
 
     return (
-        <div className="card person-card text-center">
+        <div className="card person-card text-center mt-5">
             <div className="card-body">
                 {PersonBlock(props)}
                 {ContactInformation(props)}
