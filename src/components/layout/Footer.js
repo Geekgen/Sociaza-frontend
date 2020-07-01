@@ -6,10 +6,10 @@ function Footer() {
   return (
 
     <div className="main-footer">
-      <div className="container">
+      <div className="container-fluid">
         <div className="row">
           {/* Column 1 */}
-          <div className="col">
+          <div className="col-xs-12 col-sm-6 col-md-6">
             <h6>Contact Us</h6>
             <ul className="list-unstyled">
               <li>e-Mail: sociaza.se@gmail.com</li>
@@ -19,7 +19,7 @@ function Footer() {
           </div>
 
           {/* Column 2 */}
-          <div className="col">
+          <div className="col-xs-12 col-sm-6 col-md-6">
             <h6>Have Questions ?</h6>
             <div className="footer-link-container">
               <a href="/Faq" className="footer-links">
@@ -45,7 +45,7 @@ function Footer() {
 
         {/* Footer Bottom */}
         <div className="row">
-          <p className="col-sm">
+          <p className="col-xs-12 col-sm-6 col-md-10">
             &copy;{new Date().getFullYear()} GEEKGEN INC | All Rights
             Reserved | &ensp;
             <a href="/serviceterms" className="footer-links">

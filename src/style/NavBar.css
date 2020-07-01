@@ -1,14 +1,62 @@
 .navlink {
     font-size: medium;
     color: #a4c100;
-    border-radius: 5px;
-    
+    border-radius: .5em;
+    vertical-align:middle;
+
   }
 
   .nav-text {
-    font-size: medium;
     color: #a4c100;
-    align-self: center;
-    border-radius: 5px;
-    
+    border-radius: .5em; 
   }
+
+  .borderBottom {
+    border-bottom: -10em;
+  }
+
+  #basic-nav-dropdown {
+    font-size: 1.1rem;
+    vertical-align: middle;
+  }
+
+
+  @media (max-width: 576px) {
+    .nav-text {
+      align-self: center;
+      border-radius: .5rem; 
+    }
+
+    .dropdownmenu {
+      background-color: #436bb6;
+    }
+  
+    #basic-nav-dropdown {
+      font-size: 1.2rem;
+    }
+
+    .navcollapse {
+      background-color: #072e74;
+    }
+
+    .navlink {
+      font-size: 3rem
+    }
+    
+    #basic-nav-dropdown {
+      margin-left: -10rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .navlink {
+      font-size: .4em;
+      display: inline-block;
+    }
+
+    .nav-text {
+      font-size: .4em;
+    }
+  }
+
+ 

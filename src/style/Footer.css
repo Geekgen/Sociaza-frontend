@@ -1,6 +1,6 @@
 .main-footer {
   background-color: #072e74;
-  margin-top: 2rem;
+  margin-top: 1rem;
   padding-top: 1rem;
   position: relative;
   bottom: 0em;
@@ -10,14 +10,74 @@
 
 li,
 a {
-  font-size: 12px;
+  font-size: 1.1em;
 }
 
-h6 {
+.main-footer h6 {
   font-weight: bold;
   text-decoration: underline;
+  font-size: 1.2em;
 }
 
 .footer-links {
   color: white;
+}
+
+@media (max-width: 576px) {
+  .main-footer {
+    margin-top: 1rem;
+    padding-top: .5rem;
+  }
+  
+  li, a {
+    font-size: .7rem;
+  }
+  
+  .footer-links {
+    font-size: .7rem;
+  }
+
+  .main-footer h6 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-footer {
+    margin-top: 1rem;
+    padding-top: .5rem;
+  }
+  
+  li,
+  a {
+    font-size: 1.1rem;
+  }
+  
+  .footer-links {
+    font-size: 1.1rem;
+  }
+
+  .main-footer h6 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .main-footer {
+    margin-top: 1rem;
+    padding-top: .5rem;
+  }
+  
+  li,
+  a {
+    font-size: 1.1rem;
+  }
+  
+  .footer-links {
+    font-size: 1.1rem;
+  }
+
+  .main-footer h6 {
+    font-size: 1.3rem;
+  }
 }

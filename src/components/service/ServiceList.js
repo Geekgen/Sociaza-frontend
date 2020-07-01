@@ -50,14 +50,14 @@ class ServiceList extends React.Component {
     var variable = getParams();
 
         return (
-          <div className='table table-hover table-responsive '>
+          <div className='table table-hover table-responsive w-100 d-block d-md-table'>
             <h2>Available Events</h2>
             <table className='table service-table'>
               <thead>
                 <tr>
                   <th scope='col'>Title</th>
                   <th scope='col'>Location</th>
-                  <th scope='col'>Date</th>
+                  <th scope='col' id="sericeDate">Date</th>
                   <th scope='col'>Type</th>
                   <th></th>
                 </tr>

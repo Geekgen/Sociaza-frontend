@@ -10,7 +10,7 @@ class HomePage extends Component {
           className="carousel slide "
           data-ride="carousel"
         >
-          <ol className="carousel-indicators" style={{ color: "black" }}>
+          <ol className="carousel-indicators">
             <li
               data-target="#carouselExampleIndicators"
               data-slide-to="0"
@@ -21,19 +21,16 @@ class HomePage extends Component {
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
           </ol>
           <div className="carousel-inner">
-            <div className="carousel-item active"
-              style={{ width: "1200px", height: "300px", background: "white" }}>
-              <center>
-                <img
+            <div className="carousel-item active">
+              
+                <img 
                   src={require(`../../assets/images/Sociaza_banner.png`)}
-                  width={820}
-                  height={312}
                   alt="Logo"
                 />
-              </center>
-              <div className="carousel-caption d-none d-md-block">
+             
+              <div className="carousel-caption ">
                 <div className="display-3 landingPageHeader"
-                  style={{ paddingTop: "100px", paddingBottom: "60px" }}></div>
+                  ></div>
 
                 <Link className="link-button" to="/serviceform">
                   <button type="button" className="btn btn-lg">
@@ -43,18 +40,35 @@ class HomePage extends Component {
               </div>
             </div>
             <div className="carousel-item"
-              style={{ width: "1200px", height: "300px", background: "white" }}>
-              <center>
+              >
+              
                 <img
-                  src={require(`../../assets/homepagecarousels/food.png`)}
-                  width={820}
-                  height={312}
-                  alt="Food"
+                  src={require(`../../assets/homepagecarousels/bicycle.png`)}
+                  alt="Cycling"
                 />
-              </center>
+             
               <div className="carousel-caption d-none d-md-block">
                 <div className="display-3 landingPageHeader"
-                  style={{ paddingTop: "100px", paddingBottom: "60px" }}></div>
+                  ></div>
+
+                <Link className="link-button" to="/service?service=all">
+                  <button type="button" className="btn btn-lg">
+                    Let's ride
+                  </button>
+                </Link>
+              </div>
+            </div>
+            <div className="carousel-item"
+              >
+             
+                <img
+                  src={require(`../../assets/homepagecarousels/food.png`)}
+                  alt="Food"
+                />
+             
+              <div className="carousel-caption d-none d-md-block">
+                <div className="display-3 landingPageHeader"
+                  ></div>
 
                 <Link className="link-button" to="/food">
                   <button type="button" className="btn btn-lg">
@@ -64,18 +78,16 @@ class HomePage extends Component {
               </div>
             </div>
             <div className="carousel-item"
-              style={{ width: "1200px", height: "300px", background: "white" }}>
-              <center>
+              >
+             
                 <img
                   src={require(`../../assets/homepagecarousels/game.png`)}
-                  width={820}
-                  height={312}
                   alt="Game"
                 />
-              </center>
+            
               <div className="carousel-caption d-none d-md-block">
                 <div className="display-3 landingPageHeader"
-                  style={{ paddingTop: "100px", paddingBottom: "60px" }}></div>
+                  ></div>
 
                 <Link className="link-button" to="/games">
                   <button type="button" className="btn btn-lg">
@@ -84,27 +96,7 @@ class HomePage extends Component {
                 </Link>
               </div>
             </div>
-            <div className="carousel-item"
-              style={{ width: "1200px", height: "300px", background: "white" }}>
-              <center>
-                <img
-                  src={require(`../../assets/homepagecarousels/bicycle.png`)}
-                  width={820}
-                  height={312}
-                  alt="Cycling"
-                />
-              </center>
-              <div className="carousel-caption d-none d-md-block">
-                <div className="display-3 landingPageHeader"
-                  style={{ paddingTop: "100px", paddingBottom: "60px" }}></div>
-
-                <Link className="link-button" to="/service?service=all">
-                  <button type="button" className="btn btn-lg">
-                    Let's ride
-                  </button>
-                </Link>
-              </div>
-            </div>
+            
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -121,11 +113,8 @@ class HomePage extends Component {
         {/* OUTDOOR SERVICES */}
         <div className="container-fluid-padding">
           <div className="row welcome text-center">
-            <div className="col-12">
-              <h1
-                className="display-3 landingPageHeader"
-                style={{ paddingTop: "60px", paddingBottom: "30px" }}
-              >
+            <div className="col-xs-12 col-sm-6 col-md-12">
+              <h1 className="landingPageHeader">
                 Brazuca Svenska Community
               </h1>
             </div>
@@ -135,67 +124,70 @@ class HomePage extends Component {
         {/* CARDS */}
         <div className="container-fluid" style={{ padding: "30px" }}>
           <div className="row padding">
-            <div className="col-md-4">
+            <div className="col-xs-12 col-sm-6 col-md-4">
               <div className="card shadow">
                 <img
                   className="card-img-top"
                   src={require(`../../assets/homepagecards/Cycling.jpg`)}
-                  width={300}
-                  height={200}
                   alt="pedals"
                 />
                 <div className="card-body">
-                  <h4 className="card.title landingPageHeader">Pedals</h4>
+                  <h4 className="card.title landingPageHeader" id="h4Pedals">Pedals</h4>
                   <hr />
                   <Link
                     className="link-button-homepage"
                     to="/service?service=pedals"
                   >
-                    <button type="button" className="btn homepage btn-lg">
-                      View more
+                    <button type="button" className="btn homepage" id="btnPedals" >
+                    Pedals
+                    </button>
+                    <button type="button" className="btn homepage" id="btnMPedals" >
+                    View more
                     </button>
                   </Link>
                 </div>
               </div>
             </div>
-            <div className="col-md-4">
+            <div className="col-xs-12 col-sm-6 col-md-4">
               <div className="card shadow">
                 <img
                   class="card-img-top"
                   src={require(`../../assets/homepagecards/hiking.jpg`)}
-                  width={300}
-                  height={200}
                   alt="SoccerOut"
                 />
                 <div className="card-body">
-                  <h4 className="card.title landingPageHeader">Hiking trails</h4>
+                  <h4 className="card.title landingPageHeader" id="h4Hiking">Hiking trails</h4>
                   <hr />
                   <Link className="link-button-homepage" to="/service?service=hiking">
-                    <button type="button" className="btn btn-lg">
+                    <button type="button" className="btn homepage" id="btnMHiking">
                       View more
+                    </button>
+                    <button type="button" className="btn homepage" id="btnHiking">
+                      Hiking trails
                     </button>
                   </Link>
                 </div>
               </div>
             </div>
-            <div className="col-md-4">
+            <div className="col-xs-12 col-sm-6 col-md-4">
               <div className="card shadow">
                 <img
                   class="card-img-top"
                   src={require(`../../assets/homepagecards/food.jpg`)}
-                  width={300}
-                  height={200}
                   alt="yoga"
                 />
                 <div className="card-body">
-                  <h4 className="card.title landingPageHeader">Food &amp; Recipes</h4>
+                  <h4 className="card.title landingPageHeader" id="h4Food">Food &amp; Recipes</h4>
                   <hr />
                   <Link
                     className="link-button-homepage"
                     to="/food"
                   >
-                    <button type="button" className="btn btn-lg">
+                    <button type="button" className="btn homepage" id="btnMFood">
                       View more
+                    </button>
+                    <button type="button" className="btn homepage" id="btnFood">
+                    Food &amp; Recipes
                     </button>
                   </Link>
                 </div>
@@ -207,17 +199,15 @@ class HomePage extends Component {
 
           {/*CARDS SENOND ROW*/}
           <div className="row padding">
-            <div className="col-md-4">
+            <div className="col-xs-12 col-sm-6 col-md-4">
               <div className="card shadow">
                 <img
                   class="card-img-top"
                   src={require(`../../assets/homepagecards/games.jpg`)}
-                  width={300}
-                  height={200}
                   alt="group Training"
                 />
                 <div className="card-body">
-                  <h4 className="card.title landingPageHeader">
+                  <h4 className="card.title landingPageHeader" id="h4Games">
                     Games
                   </h4>
                   <hr />
@@ -225,53 +215,58 @@ class HomePage extends Component {
                     className="link-button-homepage"
                     to="/games"
                   >
-                    <button type="button" className="btn btn-lg">
+                    <button type="button" className="btn homepage" id="btnMGames">
                       View more
+                    </button>
+                    <button type="button" className="btn homepage" id="btnGames">
+                      Games
                     </button>
                   </Link>
                 </div>
               </div>
             </div>
-            <div className="col-md-4">
+            <div className="col-xs-12 col-sm-6 col-md-4">
               <div className="card shadow">
                 <img
                   class="card-img-top"
                   src={require(`../../assets/homepagecards/turism.jpg`)}
-                  width={300}
-                  height={200}
                   alt="turism"
                 />
                 <div className="card-body">
-                  <h4 className="card.title landingPageHeader">Tourism tips</h4>
+                  <h4 className="card.title landingPageHeader" id="h4Tourism">Tourism tips</h4>
                   <hr />
                   <Link
                     className="link-button-homepage"
                     to="/tourism"
                   >
-                    <button type="button" className="btn btn-lg">
+                    <button type="button" className="btn homepage" id="btnMTourism">
                       View more
+                    </button>
+                    <button type="button" className="btn homepage"  id="btnTourism">
+                    Tourism tips
                     </button>
                   </Link>
                 </div>
               </div>
             </div>
-            <div className="col-md-4">
+            <div className="col-xs-12 col-sm-6 col-md-4">
               <div className="card shadow">
                 <img
                   class="card-img-top"
                   src={require(`../../assets/homepagecards/news.jpg`)}
-                  width={300}
-                  height={200}
                   alt="group-run"
                 />
                 <div className="card-body">
-                  <h4 className="card.title landingPageHeader">
+                  <h4 className="card.title landingPageHeader" id="h4News">
                     Brazil and the world
                   </h4>
                   <hr />
                   <Link className="link-button-homepage" to="/notfoundpage">
-                    <button type="button" className="btn btn-lg">
+                    <button type="button" className="btn homepage" id="btnMNews">
                       View more
+                    </button>
+                    <button type="button" className="btn homepage" id="btnNews">
+                    Brazil and the world
                     </button>
                   </Link>
                 </div>

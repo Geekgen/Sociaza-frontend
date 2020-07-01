@@ -101,7 +101,7 @@ function App() {
             <ComingSoonTourism />
           </Route>
 
-          <Route path="/notfoundpage">
+          <Route path="/notfound">
             <NotFound />
           </Route>
 
@@ -124,7 +124,7 @@ function App() {
       <div className='shadowNavbar'>
         <Navbar onLogout={() => Auth.logout()} />
       </div>
-      <div className='container page-container  content-wrap mt-5'>
+      <div className='container-fluid page-container  content-wrap mt-5'>
         <Switch>
           
 
