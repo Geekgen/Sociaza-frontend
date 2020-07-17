@@ -45,9 +45,9 @@ function RegisterForm({ onSubmit }) {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="agreeTerms" onChange={(e) => setTerms(e.target.value)} />
-              <label class="form-check-label" for="agreeTermsLabel">Agree our&ensp;
+          <div className="form-check">
+            <input type="checkbox" className="form-check-input" id="agreeTerms" onChange={(e) => setTerms(e.target.value)} />
+              <label className="form-check-label" for="agreeTermsLabel">Agree our&ensp;
             <a href="/serviceterms" className="aterm">
             Terms of Service </a> {" "}</label>
             <br />

@@ -26,7 +26,7 @@ import ProfilePic from './components/profile/ProfilePic';
 import PrivacyPolicy from './components/privacypolicy/PrivacyPolicy';
 import GameComingSoon from './components/games/ComingSoonGames';
 import ComingSoonGames from "./components/games/ComingSoonGames";
-// import News from './components/news/NewsPage';
+import News from './components/news/NewsPage';
 import ComingSoonFood from './components/food/ComingSoonFood';
 import ComingSoonTourism from './components/tourism/ComingSoonTourism';
 import NotFound from './components/notfoundpage/NotFoundPage';
@@ -84,11 +84,10 @@ function App() {
             <ComingSoonGames />
           </Route>
 
-          {/*           <Route path='/news'>
+         <Route path='/news'>
             <News />
           </Route>
- */}
-
+ 
           <Route path="/privacypolicy">
             <PrivacyPolicy />
           </Route>
