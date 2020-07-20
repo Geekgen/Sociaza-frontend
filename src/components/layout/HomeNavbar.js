@@ -6,7 +6,7 @@ import Logo from "../../assets/ico.png";
 function HomeNavbar({ onLogout }) {
   return (
     <nav className="navbar navbar-expand-sm navbar-dark sticky-top shadowNavbar">
-      <div class="container-fluid">
+      <div className="container-fluid">
         <a className="navbar-brand mt=0" href="/">
           <img
             src={Logo}
@@ -21,7 +21,7 @@ function HomeNavbar({ onLogout }) {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-          <div class="navcollapse">
+          <div className="navcollapse">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item" id="linkHome">
                 <Link className="navlink nav-text" to="/">
