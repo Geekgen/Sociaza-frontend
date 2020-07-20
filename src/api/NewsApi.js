@@ -20,9 +20,9 @@ class NewsApi {
     return Api.get('/news?type=technology');
   }
 
-  getEntertainmentNews() {
-    return Api.get('/news?type=entertainment');
-  }
+ getEntertainmentNews() {
+   return Api.get('/news?type=entertainment');
+ }
 
   getSENews() {
     return Api.get('/news?type=se');

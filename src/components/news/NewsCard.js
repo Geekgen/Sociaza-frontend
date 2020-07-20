@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import moment from 'moment';
+import { useId } from "react-id-generator";
 
 import '../../style/News.css';
 
@@ -17,17 +18,17 @@ function NewsCard(props) {
     const [description, setDescription] = React.useState();
     const [type, setType] = React.useState();
 
-
-
+    const uniqueId = useId();
+   
     return (
-        <div className="card">
-            <img className="img-fluid" src={props.urlToImage} alt="" />
-            <div className="card-img-overlay"> <span className="badge badge-pill badge-danger">{props.type}</span> </div>
-            <div className="card-body">
-                <div className="news-title">
-                    <h2 className=" title-small"><a href="#">{props.title}</a></h2>
+        <div className="card" key={uniqueId}>
+            <img className="img-thumbnail mh-50" src={props.urlToImage} alt="" key={useId()}/>
+            <div className="card-img-overlay" key={useId()}> <span className="badge badge-pill badge-danger" key={useId()}>{props.type}</span> </div>
+            <div className="card-body" key={useId()}>
+                <div className="news-title" key={useId()}>
+                    <h2 className=" title-small" key={useId()}><a href={props.url} key={useId()}>{props.title}</a></h2>
                 </div>
-                <p className="card-text"><small className="text-time"><em>{moment(props.publishedAt).format('MMMM Do YYYY, h:mm:ss a')}</em></small></p>
+                <p className="card-text" key={useId()}><small className="text-time" key={useId()}><em key={useId()}>{moment(props.publishedAt,  "YYYYMMDD HH:mm:ss").fromNow()}</em> &mdash; {moment(props.publishedAt).format('lll')}  </small></p>
             </div>
         </div>
     );

@@ -1,120 +1,49 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
 import { Tabs, Tab, TabPanel, TabList } from 'react-web-tabs';
-import NewsApi from '../../api/NewsApi';
+import { useId } from "react-id-generator";
 
 import '../../style/NewsTabs.css';
+import SportNews from './SportNews';
+import HealthNews from './HealthNews';
+import TechNews from './TechNews';
+import EntertainmentNews from './EntertainmentNews';
 
 function NewsTabs(props) {
 
-    constructor(props) {
-        super(props);
     
-        this.state = {
-          source: [],
-          author: '',
-          title: '',
-          description: '',
-          url: '',
-          urlToImage: '',
-          publishedAt: '',
-          content: '',
-          curTime: new Date().toLocaleString()
-        };
-      }
-
-    async componentDidMount() {
-        try {
-          /* const response = await NewsApi.getAllNews();
-          const news = response.data; */
-          NewsApi.getAllNews()
-            .then(({ data }) => this.setState({
-              articles1: data.slice(0, 3),
-              articles2: data.slice(3, 5),
-              articles3: data.slice(5, 7)
-            }))
-            .catch((err) => console.error(err));
-    
-          NewsApi.getTechNews()
-            .then(({ data }) => this.setState({
-              techArticles: data.slice(0, 4)
-            }))
-            .catch((err) => console.error(err));
-    
-          NewsApi.getHealthNews()
-            .then(({ data }) => this.setState({
-             healthArticles: data.slice(0, 4)
-            }))
-            .catch((err) => console.error(err));
-    
-          NewsApi.getEntertainmentNews
-            .then(({ data }) => this.setState({
-              entertaimentArticles: data.slice(0, 4)
-            }))
-            .catch((err) => console.error(err));
-    
-            NewsApi.getSportNews
-            .then(({ data }) => this.setState({
-             sportArticles: data.slice(0, 4)
-            }))
-            .catch((err) => console.error(err));
-    
-            NewsApi.getSENews
-            .then(({ data }) => this.setState({
-              swedenArticles: data.slice(0, 4)
-            }))
-            .catch((err) => console.error(err));
-    
-        } catch (e) {
-          console.error(e);
-        }
-      }
-    
-
-    const [source, setSource] = React.useState();
-    const [title, setTitle] = React.useState();
-    const [author, setAuthor] = React.useState();
-    const [url, setUrl] = React.useState();
-    const [urlToImage, setUrlToImage] = React.useState();
-    const [publishedAt, setPublishedAt] = React.useState();
-    const [content, setContent] = React.useState();
-    const [description, setDescription] = React.useState();
-    const [curTime, setcurTime] = React.useState();
 
     return (
         <Tabs className="warpper"
+            key="newsTabs"
             defaultTab="one"
             onChange={(tabId) => { console.log(tabId) }}
         >
-            <TabList class="tabs">
-                <Tab tabFor="one" className="tab" id="one-tab" >Tech</Tab>
-                <Tab tabFor="two" className="tab" id="two-tab" >Health</Tab>
-                <Tab tabFor="three" className="tab" id="three-tab" >Sports</Tab>
-                <Tab tabFor="four" className="tab" id="four-tab" >Entertainment</Tab>
+            <TabList className="tabs"  key="newsTabList">
+                <Tab tabFor="one" className="tab" id="one-tab"  key="one-tab">Tech</Tab>
+                <Tab tabFor="two" className="tab" id="two-tab" key="two-tab" >Health</Tab>
+                <Tab tabFor="three" className="tab" id="three-tab"  key="three-tab">Sports</Tab>
+                <Tab tabFor="four" className="tab" id="four-tab" key="four-tab" >Entertainment</Tab>
             </TabList>
-            <div class="panels">
-                <TabPanel tabId="one" >
-                    <div id="one-panel">
-                       
+            <div className="panels" id="panels" key="panels">
+                <TabPanel tabId="one" key="tabIdOne" >
+                    <div id="one-panel" key="one-panel">
+                       <TechNews key={useId('techNews-')} />
                     </div>
 
                 </TabPanel>
-                <TabPanel tabId="two" >
-                    <div id="two-panel" >
-                        <div class="panel-title">Health</div>
-                        <p>Health Health Health Health Health Health Health Health Health Health Health Health Health</p>
+                <TabPanel tabId="two" key="tabIdTwo" >
+                    <div id="two-panel" key="two-panel" >
+                    <HealthNews key={useId('healthNews')} />
                     </div>
                 </TabPanel>
-                <TabPanel tabId="three" id="three-panel">
-                    <div >
-                        <div class="panel-title">Sports</div>
-                        <p>Sports Sports Sports Sports Sports Sports Sports</p>
+                <TabPanel tabId="three" id="three-panel" key="three-panel">
+                    <div  id="three-panel" key="three-panel">
+                      <SportNews key={useId('sportNews')} />
                     </div>
                 </TabPanel>
-                <TabPanel tabId="four" id="four-panel">
-                    <div  >
-                        <div class="panel-title">Entertainment</div>
-                        <p>Entertainment Entertainment Entertainment Entertainment </p>
+                <TabPanel tabId="four" id="four-panel" key="four-panel">
+                    <div id="four-panel" key="four-panel" >
+                      <EntertainmentNews key={useId('entertainmentNews')} />
                     </div>
                 </TabPanel>
             </div>

@@ -4,7 +4,7 @@ body{
   font-family: 'Arimo', sans-serif;
 }
 h2{
-  color:#000;
+  color:#072e74;
   text-align:center;
   font-size:2em;
 }
@@ -17,15 +17,16 @@ h2{
   cursor: pointer;
   padding:10px 20px;
   margin:0px 2px;
-  background:#000;
+  background:#CDDC39;
   display:inline-block;
-  color:#fff;
+  color:#072e74;
   border-radius:3px 3px 0px 0px;
-  box-shadow: 0 0.5rem 0.8rem #00000080;
+  box-shadow: 0 0.5rem 0.8rem #072e74;
+  font-weight: 600;
 }
 .panels{
-  background:#fffffff6;
-  box-shadow: 0 2rem 2rem #00000080;
+  background:#f2f8f8;
+  box-shadow: 0 0.5rem 0.5rem #072e74;
   min-height:20rem;
   width:100%;
   max-width:60rem;
@@ -60,7 +61,7 @@ h2{
 #one:checked ~ .tabs #one-tab,
 #two:checked ~ .tabs #two-tab,
 #three:checked ~ .tabs #three-tab{
-  background:#fffffff6;
-  color:#000;
-  border-top: 3px solid #000;
+  background:#CDDC39;
+  color:#072e74;
+  border-top: 3px solid #072e74;
 }

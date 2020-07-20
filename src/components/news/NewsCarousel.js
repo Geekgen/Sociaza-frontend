@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
+import { useId } from "react-id-generator";
 import moment from 'moment';
 import '../../style/News.css';
 
@@ -21,13 +22,23 @@ function NewsCarousel(props) {
 
     return (
         
-        <div class="news-block">
-        <div class="news-media"><img class="img-fluid" src={props.urlToImage} alt="" /></div>
-        <div class="news-title">
-            <h2 class=" title-small"><a href="#">{}</a></h2>
+        <div className="news-block" key={useId('carouselItem')}>
+        <div className="news-media" key={useId('carouselItemMedia')}>
+            <img  src={props.urlToImage} alt="" key={useId('carouselItemMedia')}/>
+            <div class="carousel-caption">
+            <div className="boxgallery"></div>
+            <div className="contentgallery">
+                <h3 class="display-2">{props.title}</h3>
+				
+            </div>
+            <button type="button" class="btn btn-outline-light btn-lg">View more</button>
+            </div>
         </div>
-        <div class="news-des">{props.title}</div>
-        <div class="time-text"><strong>{}</strong></div>
+       {/*  <div className="news-title" key={useId('carouselLink')}>
+            <h2 className=" title-small" key={useId('carouselLink')}><a href={props.url} key={useId('carouselLink')}>View more</a></h2>
+        </div> */}
+        {/* <div className="news-des" key={useId('carouselItemTitle')}>{props.title}</div> */}
+        {/* <div className="time-text"><strong>{}</strong></div> */}
         </div> 
         
         //(props.curTime - props.publishedAt) / (1000 * 60 * 60)
