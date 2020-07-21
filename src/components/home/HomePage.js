@@ -261,7 +261,7 @@ class HomePage extends Component {
                     Brazil and the world
                   </h4>
                   <hr />
-                  <Link className="link-button-homepage" to="/notfoundpage">
+                  <Link className="link-button-homepage" to="/news">
                     <button type="button" className="btn homepage" id="btnMNews">
                       View more
                     </button>
