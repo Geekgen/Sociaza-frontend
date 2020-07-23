@@ -9,7 +9,7 @@ function NotFoundPage() {
        <center> <div className="container">
           <div className="pull-right" style={{marginTop:"10px"}}>
             <div className="container col-md-offset-1 pull-right">
-              <img className="img-error" src="https://bootdey.com/img/Content/fdfadfadsfadoh.png" />
+              <img className="img-error" src="https://bootdey.com/img/Content/fdfadfadsfadoh.png" alt="Homer Simpson error message"/>
               <h2>404 Not Found</h2>
               <p>Sorry, an error has occured, Requested page not found!</p>
               <div className="error-actions">

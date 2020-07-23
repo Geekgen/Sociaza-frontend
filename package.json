@@ -10,12 +10,15 @@
     "axios": "^0.19.2",
     "bootstrap": "^4.5.0",
     "draft-js": "^0.11.6",
+    "express": "^4.17.1",
+    "express-favicon": "^2.0.1",
     "font-awesome": "^4.7.0",
     "infinite-react-carousel": "^1.2.11",
     "leaflet": "^1.6.0",
     "leaflet-routing-machine": "^3.2.12",
     "mapbox-gl": "^1.11.0",
     "moment": "^2.26.0",
+    "path": "^0.12.7",
     "popper.js": "^1.16.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
@@ -63,5 +66,6 @@
   "devDependencies": {
     "jquery": "^3.5.1",
     "typescript": "^3.9.5"
-  }
+  },
+  "proxy": "https://sociaza.se"
 }

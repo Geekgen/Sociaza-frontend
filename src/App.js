@@ -99,13 +99,11 @@ function App() {
           <Route path="/tourism">
             <ComingSoonTourism />
           </Route>
-
-          <Route path="/notfound">
-            <NotFound />
-          </Route>
-
-          <Route path='/'>
+          <Route exact path='/'>
             <HomePage />
+          </Route>
+          <Route path="/*">
+            <NotFound />
           </Route>
         </Switch>
       </div>
