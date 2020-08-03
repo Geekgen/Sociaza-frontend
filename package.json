@@ -33,6 +33,7 @@
     "react-owl-carousel": "^2.3.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.1",
+    "react-server-cli": "^0.8.1",
     "react-slideshow-image": "^2.0.1",
     "react-web-tabs": "^1.0.1",
     "redux": "^4.0.5",
@@ -43,10 +44,9 @@
     "video-react": "^0.14.1"
   },
   "scripts": {
-    "start": "react-scripts start -p 3000",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "pm2 start pm2.yml --env development",
+    "start-beta": "pm2 start pm2.yml --env beta",
+    "start-prod": "pm2 start pm2.yml --env production"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -67,5 +67,21 @@
     "jquery": "^3.5.1",
     "typescript": "^3.9.5"
   },
-  "proxy": "https://sociaza.se"
+  "env": {
+    "development": {
+      "hot": true,
+      "longTermCaching": false
+    },
+    "beta": {
+      "jsUrl": "/assets/"
+    },
+    "production": {
+      "compileOnStartup": false,
+      "jsUrl": "/assets/",
+      "logLevel": "error",
+      "minify": true
+    }
+  },
+  "webpackConfig": "./webpack.config.js",
+  "proxy": "127.0.0.1:5000"
 }
