@@ -17,6 +17,10 @@ class PostsApi {
     return Api.get('/posts/' + id);
   }
 
+  getPostByType(tp) {
+    return Api.get('/posts/byType/' + tp);
+  }
+
   getActiveAndFullPostByEmailAddress(emailAddress){
     return Api.get(`/posts/by-email/${emailAddress}`);
   }

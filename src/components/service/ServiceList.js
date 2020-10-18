@@ -29,7 +29,7 @@ class ServiceList extends React.Component {
     this.state = {
       posts: [],
       title: this.props.title,
-      param1: getParams,
+      params: getParams(),
     };
   }
 
@@ -38,8 +38,14 @@ class ServiceList extends React.Component {
   }
 
   componentDidMount() {
-    PostsApi.getAllActiveAndFull()
-      .then(({ data }) => this.setState({ posts: data }))
+    var apiReq;
+    if ("all" === this.state.params.service) {
+      apiReq = () => PostsApi.getAllPosts()
+    } else {
+      apiReq = () => PostsApi.getPostByType(this.state.params.service)
+    }
+
+    apiReq().then(({ data }) => this.setState({ posts: data }))
       .catch((err) => console.error(err));
   }
 
